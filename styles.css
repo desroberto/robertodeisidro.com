@@ -1,0 +1,389 @@
+:root {
+    --bg-color: #0a192f;
+    --text-color: #8892b0;
+    --highlight-color: #64ffda;
+    --sidebar-width: 400px;
+    --font-size-large: 36px;
+    --font-size-small: 16px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-optical-sizing: auto;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: rgba(10, 25, 47, 0.95);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.profile {
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    object-position: top;
+    margin-bottom: 0px;
+    image-rendering: auto;
+}
+
+h1 {
+    font-size: var(--font-size-large);
+    color: white;
+}
+
+.description {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--highlight-color);
+    margin-bottom: 0px;
+}
+
+.bio {
+    font-size: var(--font-size-small);
+    color: var(--text-color);
+    margin-bottom: 0px;
+}
+
+.sidebar-nav ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0;
+}
+
+.sidebar-nav ul li {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.sidebar-nav ul li a {
+    color: var(--text-color); /* Default text color */
+    text-decoration: none;
+    font-size: 12px; /* Smaller font size */
+    display: block;
+    padding-left: 50px; /* Indent to create space between text and dash */
+    letter-spacing: 0.1em; /* Increase letter-spacing for more space between characters */
+    line-height: 1.5; /* Adjust line height for vertical spacing */
+    transition: color 0.3s ease, font-weight 0.3s ease, padding-left 0.3s ease; /* Added padding-left to transition */
+    position: relative;
+}
+
+.sidebar-nav ul li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px; /* Initial length of the dash */
+    height: 1px; /* Initial thickness of the dash */
+    background-color: var(--text-color); /* Default dash color */
+    visibility: visible;
+    transition: all 0.3s ease; /* Ensure the color and size changes smoothly */
+}
+
+.sidebar-nav ul li a:hover,
+.sidebar-nav ul li a.active {
+    color: white; /* Text becomes white on hover or active */
+    font-weight: bold; /* Make text bold on hover or active */
+    padding-left: 80px; /* Move text to the right on hover or active */
+}
+
+.sidebar-nav ul li a:hover::before,
+.sidebar-nav ul li a.active::before {
+    width: 60px; /* Extend the dash length */
+    height: 1.5px; /* Make the dash thicker */
+    background-color: white !important; /* Ensure the dash turns white on hover or active */
+}
+
+/* Contact Icons Styling */
+.contact-icons {
+    margin-top: 50px;
+    margin-left: 10px;
+    display: flex;
+    gap: 30px; /* Space between icons */
+}
+
+.contact-icons a {
+    color: var(--text-color); /* Default text color */
+    font-size: 24px; /* Icon size */
+    transition: color 0.3s ease;
+}
+
+.contact-icons a:hover {
+    color: white; /* Turn white on hover */
+}
+
+.content {
+    flex: 1;
+    padding: 50px;
+    padding-left: 100px;
+    max-width: calc(100% - var(--sidebar-width) - 100px);
+    overflow-y: visible;
+}
+
+h2 {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: var(--font-size-small);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--highlight-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#intro p {
+    font-size: 16px;
+}
+
+/* Section Styling for Experience and Education */
+.experience-section,
+.education-section {
+    margin-top: 50px;
+    color: var(--text-color);
+}
+
+/* Item Styling for Experience and Education */
+.experience-item,
+.education-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+}
+
+/* Date and Details Styling */
+.date {
+    font-size: 16px;
+    color: var(--text-color);
+    width: 150px;
+    flex-shrink: 0;
+    text-align: left;
+}
+
+.details {
+    flex-grow: 1;
+}
+
+h3 {
+    font-size: 16px;
+    margin: 0;
+    color: white;
+    display: inline-block;
+}
+
+h3 span {
+    font-weight: normal;
+    margin-right: 4px;
+}
+
+h3 a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+h3 a:hover {
+    color: var(--highlight-color);
+}
+
+/* Paragraph Styling in Sections */
+p {
+    font-size: 14px;
+    color: var(--text-color);
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Skill List Styling */
+.skills {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.skills li {
+    background-color: rgba(100, 255, 218, 0.2);
+    color: var(--highlight-color);
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+}
+
+/* Highlight Style for Education Achievement */
+.highlight {
+    font-weight: bold;
+    color: var(--highlight-color);
+    margin-top: 5px;
+    display: block;
+}
+
+/* Article Item Layout */
+.article-link {
+    text-decoration: none;
+    display: block;
+}
+
+.article-item {
+    position: relative; /* Allows absolute positioning within it */
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(10, 25, 47, 0.95);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    height: auto; /* Let the item height be flexible, based on image size */
+}
+
+.article-link:hover .article-item {
+    background-color: rgba(100, 255, 218, 0.1);
+    transform: scale(1.02);
+}
+
+.article-thumbnail {
+    width: 125px;
+    height: auto;
+    border-radius: 2px;
+    object-fit: cover;
+    flex-shrink: 0; /* Ensure the image maintains its size */
+}
+
+.article-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    height: auto; /* Ensure it grows based on content */
+}
+
+.article-title {
+    font-size: 16px;
+    color: white;
+    margin: 5px 0;
+}
+
+/* "Written for" and date at the bottom of the container */
+.article-description {
+    color: var(--text-color);
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; /* Pushes the text to the bottom */
+    padding-top: 10px; /* Adds space above */
+    border-top: 1px solid rgba(100, 255, 218, 0.1); /* Optional separator */
+}
+
+.article-date {
+    margin-left: auto;
+    padding-right: 15px;
+    color: var(--text-color);
+    white-space: nowrap;
+}
+
+#projects {
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+.project-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(10, 25, 47, 0.95);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    /* Align the image and text */
+    padding-left: 0;
+}
+
+.project-image {
+    width: 130px;
+    height: auto;
+    border-radius: 2px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
+    padding-left: 0;
+}
+
+.project-title {
+    color: white;
+    font-size: 16px;
+    margin: 0 0 10px 0;
+}
+
+.read-more-icon {
+    color: var(--highlight-color);
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+}
+
+.project-details {
+    display: none;
+    margin-top: 15px;
+    font-size: 14px;
+    color: var(--text-color);
+    height: auto;
+    overflow: hidden;
+}
+
+.footnotes-section {
+    font-size: 30px;
+    padding-bottom: 20px;
+    color: var(--text-color);
+    text-align: center; /* Center-align text for footnotes */
+}
