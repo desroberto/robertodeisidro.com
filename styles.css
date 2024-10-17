@@ -387,26 +387,25 @@ p {
     color: var(--text-color);
     text-align: center; /* Center-align text for footnotes */
 }
-/* Adjustments for screens smaller than 1024px */
-@media only screen and (max-width: 1024px) {
+/* Adjustments for screens smaller than 1400px */
+@media only screen and (max-width: 1400px) {
     .profile-pic {
-        width: 120px;  /* Reduce the size of the profile picture */
-        height: 120px; /* Maintain aspect ratio */
+        width: 200px;  /* Reduce the size of the profile picture */
+        height: 200px; /* Maintain aspect ratio */
         margin-bottom: 20px; /* Decrease margin below the picture */
     }
 
     .profile h1 {
-        font-size: 22px; /* Slightly smaller font for the name */
+        font-size: 30px; /* Slightly smaller font for the name */
         margin-bottom: 10px; /* Reduce space under the name */
     }
 
     .profile .description {
-        font-size: 14px; /* Reduce font size for the description */
+        font-size: 20px; /* Reduce font size for the description */
         margin-bottom: 8px; /* Reduce space below description */
     }
 
     .profile .bio {
-        font-size: 12px; /* Make the bio text a bit smaller */
         margin-bottom: 12px; /* Decrease space below bio */
     }
 
@@ -415,18 +414,6 @@ p {
         margin-bottom: 5px; /* Reduce space between nav links */
     }
 
-    .sidebar-nav ul li a {
-        font-size: 12px; /* Decrease font size of nav items */
-        padding-left: 20px; /* Reduce indentation for the nav items */
-    }
-
-    .contact-icons a {
-        font-size: 18px; /* Reduce the size of the contact icons */
-    }
-
-    .sidebar {
-        padding: 10px; /* Reduce the overall padding */
-    }
 }
 
 @media (max-width: 768px) {
