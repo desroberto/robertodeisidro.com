@@ -393,7 +393,6 @@ p {
         width: 200px;  /* Reduce the size of the profile picture */
         height: 200px; /* Maintain aspect ratio */
         margin-left: 20px;
-        margin-bottom: 20px; /* Decrease margin below the picture */
     }
 
     .profile h1 {
@@ -403,16 +402,17 @@ p {
 
     .profile .description {
         font-size: 20px; /* Reduce font size for the description */
-        margin-bottom: 8px; /* Reduce space below description */
-    }
-
-    .profile .bio {
-        margin-bottom: 12px; /* Decrease space below bio */
+        margin-bottom: 5px; /* Reduce space below description */
     }
 
     .sidebar-nav ul li {
         margin-top: 5px; /* Reduce space between nav links */
         margin-bottom: 5px; /* Reduce space between nav links */
+    }
+
+    /* Contact Icons Styling */
+    .contact-icons {
+        margin-top: 20px;
     }
 
 }
