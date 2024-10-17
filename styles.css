@@ -387,3 +387,92 @@ p {
     color: var(--text-color);
     text-align: center; /* Center-align text for footnotes */
 }
+/* Adjustments for screens smaller than 1024px */
+@media only screen and (max-width: 1024px) {
+    .profile-pic {
+        width: 120px;  /* Reduce the size of the profile picture */
+        height: 120px; /* Maintain aspect ratio */
+        margin-bottom: 20px; /* Decrease margin below the picture */
+    }
+
+    .profile h1 {
+        font-size: 22px; /* Slightly smaller font for the name */
+        margin-bottom: 10px; /* Reduce space under the name */
+    }
+
+    .profile .description {
+        font-size: 14px; /* Reduce font size for the description */
+        margin-bottom: 8px; /* Reduce space below description */
+    }
+
+    .profile .bio {
+        font-size: 12px; /* Make the bio text a bit smaller */
+        margin-bottom: 12px; /* Decrease space below bio */
+    }
+
+    .sidebar-nav ul li {
+        margin-top: 5px; /* Reduce space between nav links */
+        margin-bottom: 5px; /* Reduce space between nav links */
+    }
+
+    .sidebar-nav ul li a {
+        font-size: 12px; /* Decrease font size of nav items */
+        padding-left: 20px; /* Reduce indentation for the nav items */
+    }
+
+    .contact-icons a {
+        font-size: 18px; /* Reduce the size of the contact icons */
+    }
+
+    .sidebar {
+        padding: 10px; /* Reduce the overall padding */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack the sidebar and content vertically */
+        padding: 0 20px; /* Add some padding for mobile spacing */
+    }
+
+    .sidebar {
+        width: 100%; /* Make sidebar take the full width on mobile */
+        text-align: center; /* Center content on mobile for better alignment */
+        padding: 20px;
+        margin-bottom: 20px; /* Add space between sidebar and main content */
+    }
+
+    .content {
+        padding: 20px 0; /* Adjust padding for content on mobile */
+        max-width: 100%; /* Ensure content takes full width on mobile */
+        padding-left: 0; /* Remove the left padding to center content */
+    }
+
+    .profile-pic {
+        width: 150px; /* Reduce the profile picture size for mobile */
+        height: 150px;
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        font-size: 24px; /* Adjust font size for heading */
+    }
+
+    .description {
+        font-size: 16px; /* Adjust font size for the job title */
+    }
+
+    .sidebar-nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; /* Make nav items wrap to avoid crowding */
+    }
+
+    .sidebar-nav ul li {
+        margin: 10px;
+    }
+
+    .sidebar-nav ul li a {
+        font-size: 14px; /* Slightly increase size for better readability */
+    }
+}
