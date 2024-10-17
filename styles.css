@@ -387,11 +387,12 @@ p {
     color: var(--text-color);
     text-align: center; /* Center-align text for footnotes */
 }
-/* Adjustments for screens smaller than 1400px */
-@media only screen and (max-width: 1400px) {
+/* Adjustments for screens smaller than 1600px */
+@media only screen and (max-width: 1600px) {
     .profile-pic {
         width: 200px;  /* Reduce the size of the profile picture */
         height: 200px; /* Maintain aspect ratio */
+        margin-left: 20px;
         margin-bottom: 20px; /* Decrease margin below the picture */
     }
 
