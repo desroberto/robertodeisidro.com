@@ -417,50 +417,60 @@ p {
 
 }
 
-@media (max-width: 768px) {
+/* For mobile, remove fixed/sticky positioning and make everything scrollable */
+@media only screen and (max-width: 768px) {
     .container {
-        flex-direction: column; /* Stack the sidebar and content vertically */
-        padding: 0 20px; /* Add some padding for mobile spacing */
-    }
-
-    .sidebar {
-        width: 100%; /* Make sidebar take the full width on mobile */
-        text-align: center; /* Center content on mobile for better alignment */
+        display: block;
         padding: 20px;
-        margin-bottom: 20px; /* Add space between sidebar and main content */
     }
 
-    .content {
-        padding: 20px 0; /* Adjust padding for content on mobile */
-        max-width: 100%; /* Ensure content takes full width on mobile */
-        padding-left: 0; /* Remove the left padding to center content */
+    /* Sidebar takes full width and flows with the content */
+    .sidebar {
+        width: 100%;
+        position: static;  /* Remove sticky or fixed positioning */
+        height: auto;
+        padding: 0;
+        margin-bottom: 30px;
+        display: block;
     }
 
     .profile-pic {
-        width: 150px; /* Reduce the profile picture size for mobile */
+        width: 150px;
         height: 150px;
-        margin-bottom: 15px;
-    }
-
-    h1 {
-        font-size: 24px; /* Adjust font size for heading */
-    }
-
-    .description {
-        font-size: 16px; /* Adjust font size for the job title */
+        margin: 0 auto;
     }
 
     .sidebar-nav ul {
         display: flex;
-        justify-content: center;
-        flex-wrap: wrap; /* Make nav items wrap to avoid crowding */
+        flex-direction: column;
     }
 
-    .sidebar-nav ul li {
-        margin: 10px;
+    .content {
+        padding: 0;
+        max-width: 100%;
     }
 
-    .sidebar-nav ul li a {
-        font-size: 14px; /* Slightly increase size for better readability */
+    /* Make both content and sidebar behave as normal block elements */
+    .content, .sidebar {
+        display: block;
     }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .description {
+        font-size: 18px;
+    }
+
+    /* Adjust font sizes to be smaller on mobile */
+    h2, h3, p {
+        font-size: 16px;
+    }
+
+    /* Reduce spacing between sections */
+    section {
+        margin-bottom: 20px;
+    }
+
 }
